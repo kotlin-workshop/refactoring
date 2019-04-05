@@ -15,13 +15,7 @@ class Customer(val name: String) {
         var result = "Rental Record for $name\n"
 
         for (rental in _rentals) {
-
-            // add frequent renter points
-            frequentRenterPoints++
-            // add bonus for a two day new release rental
-            if (rental.movie.priceCode == Movie.NEW_RELEASE && rental.daysRented > 1)
-                frequentRenterPoints++
-
+            frequentRenterPoints += rental.renterPoints()
             // show figures for this rental
             result += "\t" + rental.movie.title + "\t" + rental.amount().toString() + "\n"
             totalAmount += rental.amount()
