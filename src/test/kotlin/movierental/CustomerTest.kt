@@ -96,4 +96,26 @@ class CustomerTest {
         assertEquals(expected, statement)
     }
 
+//    @Test
+//    fun htmlstatementForManyMovies() {
+//        val movie1 = Movie("Madagascar", Movie.CHILDRENS)
+//        val rental1 = Rental(movie1, 6) // 6 day rental
+//        val movie2 = Movie("Star Wars", Movie.NEW_RELEASE)
+//        val rental2 = Rental(movie2, 2) // 2 day rental
+//        val movie3 = Movie("Gone with the Wind", Movie.REGULAR)
+//        val rental3 = Rental(movie3, 8) // 8 day rental
+//        val customer1 = CustomerBuilder()
+//                .withName("David")
+//                .withRentals(rental1, rental2, rental3)
+//                .build()
+//        val expected = "<H1>Rentals for <EM>David</EM></H1><P>\n" +
+//                "Madagascar: 6.0<BR>\n" +
+//                "Star Wars: 6.0<BR>\n" +
+//                "Gone with the Wind: 11.0<BR>\n" +
+//                "<P>You owe <EM>23.0</EM><P>\n" +
+//                "On this rental you earned <EM>4</EM> frequent renter points<P>"
+//        val statement = customer1.htmlStatement()
+//        assertEquals(expected, statement)
+//    }
+
 }
