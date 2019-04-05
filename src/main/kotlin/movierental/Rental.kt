@@ -27,11 +27,7 @@ class Rental(val movie: Movie, val daysRented: Int) {
 
     fun renterPoints(): Int {
         // add frequent renter points
-        var frequentRenterPoints = 0
-        frequentRenterPoints++
         // add bonus for a two day new release rental
-        if (movie.priceCode == Movie.NEW_RELEASE && daysRented > 1)
-            frequentRenterPoints++
-        return frequentRenterPoints
+        return if (movie.priceCode == Movie.NEW_RELEASE && daysRented > 1) 2 else 1
     }
 }
